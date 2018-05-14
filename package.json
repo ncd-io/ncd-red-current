@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/ncd-io/ncd-red-current/issues"
   },
-  "homepage": "https://github.com/ncd-io/ncd-red-current#readme"
+  "homepage": "https://github.com/ncd-io/ncd-red-current#readme",
+  "dependencies": {
+    "ncd-red-comm": "^1.4.4"
+  },
+  "node-red": {
+    "nodes": {
+      "ncd-red-current": "current_monitor.js"
+    }
+  }
 }
