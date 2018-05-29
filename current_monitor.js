@@ -3,9 +3,9 @@
 const CurrentMonitor = require("./index.js");
 const comms = require("ncd-red-comm");
 
-process.on('unhandledRejection', error => {
-  console.log('unhandledRejection', error);
-});
+// process.on('unhandledRejection', error => {
+//   console.log('unhandledRejection', error);
+// });
 
 
 module.exports = function(RED){
@@ -135,7 +135,7 @@ module.exports = function(RED){
 			}
 			done();
 		});
-		this.sensor.once('ready', (sensor) => {
+		this.sensor._emitter.once('ready', (sensor) => {
 			config.max_current = sensor.max_current;
 			config.channels = sensor.channels;
 			start_poll();
